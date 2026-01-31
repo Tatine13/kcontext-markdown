@@ -1,26 +1,42 @@
 # KContext Markdown
 
-A lightweight and efficient utility designed to manage and optimize context for Large Language Models (LLMs) using Markdown structures.
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+![Status](https://img.shields.io/badge/status-active-success)
 
-## Overview
+**KContext Markdown** is a lightweight and efficient Python utility designed to manage and optimize context for Large Language Models (LLMs) using Markdown structures. It ensures your prompts stay within context windows while preserving the semantic structure of your documents.
 
-KContext Markdown helps in organizing, truncating, and formatting text data to ensure it fits within LLM context windows while maintaining semantic relevance.
+## 🚀 Features
 
-## Features
+- **Markdown-Aware**: Native support for headers, lists, and code blocks.
+- **Context Optimization**: Smart truncation algorithms that respect document structure.
+- **Token Estimation**: Efficient heuristic for token counting.
+- **Zero Dependencies**: Pure Python implementation for easy integration.
 
-- **Markdown-based**: Native support for markdown headers and structures.
-- **Context Optimization**: Smart truncation and summarization capabilities.
-- **Lightweight**: Minimal dependencies, pure Python implementation.
+## 📦 Installation
 
-## Usage
+```bash
+pip install git+https://github.com/Tatine13/kcontext-markdown.git
+```
+
+## 💻 Usage
 
 ```python
 from kcontext import KContext
 
-ctx = KContext("path/to/markdown/file.md")
-print(ctx.get_optimized_content())
+# Initialize with a markdown file
+ctx = KContext("docs/technical_manual.md")
+
+# Get optimized content fitting 2000 tokens
+optimized_text = ctx.get_optimized_content(max_tokens=2000)
+
+print(optimized_text)
 ```
 
-## License
+## 🤝 Contributing
 
-MIT
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
